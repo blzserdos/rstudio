@@ -25,7 +25,7 @@ RUN install2.r --error \
     gridExtra \
     pracma \
     DoE.base \
-    AlgDesignm \
+    AlgDesign \
     factoextra \
     readxl \
     reshape2 \
