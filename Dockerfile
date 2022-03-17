@@ -15,13 +15,14 @@ RUN /rocker_scripts/install_shiny_server.sh
 # Install R packages
 RUN install2.r --error \
     tidyverse \
+    stats \
+    utils \
     devtools \
     ggpubr \
     vegan \
     DHARMa \
     furrr \
     VGAM \
-    cds \
     gridExtra \
     pracma \
     DoE.base \
