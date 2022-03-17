@@ -12,6 +12,29 @@ ENV ADD=shiny
 ## Install Shiny server
 RUN /rocker_scripts/install_shiny_server.sh
 
+# Install R packages
+RUN install2.r --error \
+    tidyverse \
+    devtools \
+    ggpubr \
+    vegan \
+    DHARMa \
+    furrr \
+    VGAM \
+    cds \
+    gridExtra \
+    pracma \
+    DoE.base \
+    AlgDesignm \
+    factoextra \
+    readxl \
+    reshape2 \
+    data.table \
+    dtw \
+    optparse \
+    proxy \
+    pdist
+
 ## For R<4 : https://github.com/rocker-org/rocker-versioned/blob/master/rstudio/add_shiny.sh
 # COPY add_shiny.sh /etc/cont-init.d/add
 # RUN bash /etc/cont-init.d/add
